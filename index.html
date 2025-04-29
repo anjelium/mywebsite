@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seelyst</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+   <style>
+    body {
+      margin: 0;
+      background: linear-gradient(to bottom, #000, #111);
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    footer a img:hover {
+      transform: scale(1.2);
+    }
+
+    header, section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    h1 {
+  position: relative;
+  font-size: 84px;
+  margin: 0;
+  color: white;
+  text-align: center;
+  animation: updown 3s ease-in-out infinite alternate, blink 1.5s infinite alternate;
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+    .subtitle {
+      font-size: 32px;
+      color: #ccc;
+      margin: 10px 0 30px;
+    }
+
+
+
+@keyframes upDownPro {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(-6px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  75% {
+    transform: translateY(4px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.updown {
+ animation: updown 3s ease-in-out infinite alternate;
+}
+
+.terminal {
+  background: #1e1e1e;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 850px;
+  margin: auto;
+  font-family: 'Courier New', Courier, monospace;
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 1px;
+  color: #00ff00;
+  height: auto;
+  min-height: 100px;
+  height: 50vh;
+  animation: blink 1.5s infinite alternate; 
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+    .terminal, .learn-more-button {
+  animation: updown 3s ease-in-out infinite alternate;
+}
+
+
+    .terminal-bar {
+      background: #222;
+      height: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 10px;
+      font-size: 0.9rem;
+      border-bottom: 1px solid #333;
+    }
+
+    .window-buttons {
+      display: flex;
+      gap: 6px;
+    }
+
+    .btn {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+
+    .close { background: #ff5f56; }
+    .minimize { background: #ffbd2e; }
+    .maximize { background: #27c93f; }
+
+    .terminal-title {
+      color: #ccc;
+    }
+
+    .terminal-content {
+      background: #111;
+      color: #00ff00;
+      padding: 20px;
+      flex: 1;
+      text-align: left;
+      font-size: 1rem;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    .typewriter-text {
+      border-right: 2px solid #0f0;
+      animation: blink-caret 0.7s infinite;
+    }
+
+    @keyframes blink-caret {
+      0%, 100% { border-color: transparent; }
+      50% { border-color: #0f0; }
+    }
+
+
+.terminal-content {
+  margin-top: -05px;
+  padding: 15px;
+  color: #00ff00;
+  text-align: left;
+  font-family: 'Courier New', Courier, monospace;
+  white-space: pre-wrap;
+  word-break: break-word;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+
+.terminal-window {
+  background-color: #111;
+  border-radius: 8px;
+  padding: 20px;
+  width: 700px; 
+  max-width: 90%;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.5); 
+}
+
+.terminal-content pre {
+  margin: 0;
+  padding: 0;
+}
+
+.typewriter-text {
+  border-right: 2px solid #0f0;
+}
+
+.learn-more-button {
+  margin-top: 60px;
+  padding: 12px 30px;
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s, color 0.3s;
+}
+
+.learn-more-button:hover {
+  background: #fff;
+  color: #000;
+  transform: scale(1.08);
+}
+
+    @keyframes updown {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-5px); }
+      100% { transform: translateY(0px); }
+    }
+
+    #sobre-nos h2 {
+  font-size: 3.5rem;
+  color: #ffffff;
+  text-align: center;
+  animation: blink 1.5s infinite alternate;
+  margin-bottom: 20px;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+    #equipe {
+  background: linear-gradient(to bottom, #111, #222); 
+  text-align: center;
+}
+
+#nossa-equipe h2 {
+  font-size: 3.5rem; 
+  color: #ffffff;
+  text-align: center;
+  animation: blink 1.5s infinite alternate;
+  margin-bottom: 20px;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+.stats-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  margin-top: 5rem;
+  flex-wrap: wrap; 
+}
+
+.stat-card {
+  position: relative; 
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.95) 100%);
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+  min-width: 320px; 
+  max-width: 380px; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  animation: updown 3s ease-in-out infinite; 
+  overflow: hidden; 
+  z-index: 1; 
+}
+
+.stat-card:hover {
+  transform: scale(1.1); 
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+    .stat-icon {
+  width: 70px; 
+  margin-bottom: 1rem;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  animation: blink 1.5s infinite alternate;
+}
+
+.stat-label {
+  color: #ccc;
+  margin-top: 0.5rem;
+  animation: blink 1.5s infinite alternate; 
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6; 
+  }
+}
+
+    @keyframes updown {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0px); }
+}
+
+    .equipe .cards {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.card:hover {
+  transform: scale(1.08);
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+.card {
+  position: relative;
+  background: radial-gradient(circle, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.95) 100%);
+  padding: 30px;
+  border-radius: 12px;
+  width: 500px;
+  min-height: 350px;
+  display: flex;
+  align-items: flex-start;
+  text-align: left;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: calc(100% + 6px);
+  height: calc(100% + 6px);
+  border-radius: 15px;
+  border: 3px solid transparent;
+  background: linear-gradient(270deg, red, orange, yellow, green, cyan, blue, purple, red);
+  background-size: 400% 400%;
+  z-index: 2;
+  pointer-events: none;
+  mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: destination-out;
+  padding: 3px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.card:hover::after {
+  opacity: 1;
+  animation: animateBorder 6s linear infinite;
+}
+
+.card-inner {
+  animation: float 3s ease-in-out infinite alternate;
+  width: 100%;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0px); }
+}
+
+.skills-title {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  margin-top: 20px;
+  color: #fff;
+}
+
+@keyframes animateBorder {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.card-topo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card-info h4 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: #fff;
+}
+
+.card-info .cargo {
+  font-size: 1rem;
+  color: #bbb;
+  margin-top: 4px;
+}
+
+.frase {
+  font-style: italic;
+  color: #ccc;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.habilidades {
+  margin-bottom: 20px;
+}
+
+.habilidades span {
+  background: #222;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: #ccc;
+  margin-right: 8px;
+  display: inline-block;
+  margin-top: 5px;
+  transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease; /* Suaviza o hover */
+}
+
+.habilidades span:hover {
+  transform: scale(1.1);
+  background: #fff; 
+  color: #000; 
+}
+
+.titulo-skills {
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 8px;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.descricao {
+  font-size: 0.95rem;
+  color: #ccc;
+  line-height: 1.5;
+}
+.card {
+  position: relative; 
+}
+
+.card-inner {
+  animation: float 3s ease-in-out infinite alternate;
+  width: 100%;
+  height: 100%;
+  display: flex; 
+  flex-direction: column; 
+}
+
+.instagram {
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #aaa;
+  transition: transform 0.3s ease, color 0.3s ease; /* Suaviza o hover */
+}
+
+.instagram:hover {
+  transform: scale(1.1); /* Aumenta o tamanho */
+  color: #fff; /* Muda a cor do texto para branco */
+}
+
+.instagram img {
+  transition: transform 0.3s ease; /* Suaviza o hover na imagem */
+}
+
+.instagram:hover img {
+  transform: scale(1.2); /* Aumenta o tamanho do ícone */
+}
+
+#about-us {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #000;
+}
+
+#about-us h2 {
+  font-size: 48px;
+  font-weight: bold;
+  color: #999;
+  margin-bottom: 30px;
+}
+
+#about-us p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 20px;
+  color: #fff;
+  line-height: 1.6; 
+}
+
+#about-us strong {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff;
+  }
+  50% {
+    text-shadow: 0 0 2px #fff, 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff;
+  }
+  100% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff;
+  }
+}
+
+#about-us {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #000;
+}
+
+#about-us, .stats {
+  margin: 0;
+  padding: 0;
+}
+
+#about-us, .stats {
+  border: none;
+  box-shadow: none;
+}
+
+body {
+  background-color: #000;
+}
+
+section {
+  background-color: #000; 
+  padding: 0;
+}
+
+.stats {
+  background-color: #000; 
+}
+
+#nossa-equipe {
+  background-color: #000; 
+}
+
+#membros {
+  background-color: #000; 
+}
+
+section {
+  margin: 0;
+  padding: 0;
+}
+
+.stats-container, #about-us, #nossa-equipe, #membros {
+  border: none;
+  box-shadow: none;
+}
+
+#about-us h2 {
+  font-size: 48px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 30px;
+  animation: blink-synced 1.5s infinite alternate; 
+}
+
+.about-us-image {
+  display: block;
+  margin: 50px auto 20px; 
+  width: 200px; 
+  transform: translateY(20px); 
+}
+
+#about-us p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 20px;
+  color: #fff;
+  line-height: 1.6;
+}
+
+#about-us strong {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.about-us-image {
+  display: block;
+  margin: 50px auto 20px; 
+  width: 200px; 
+  transform: translateY(60px); 
+  animation: blink-synced 1.5s infinite alternate; 
+}
+
+@keyframes blink-synced {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6; 
+  }
+}
+
+.hero-section {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+              url('images/world.png') no-repeat center center;
+  background-size: cover;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  text-align: center;
+  padding: 0; 
+  position: relative;
+  overflow: hidden;
+}
+
+  .hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/vintage.gif'); 
+    opacity: 0.1; 
+    z-index: 0; 
+    pointer-events: none; 
+    animation: static-noise 0.5s steps(10) infinite; 
+  }
+
+  .hero-section > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  @keyframes static-noise {
+    0% {
+      opacity: 0.08;
+    }
+    50% {
+      opacity: 0.12;
+    }
+    100% {
+      opacity: 0.08;
+    }
+  }
+
+.terminal {
+  background: #1e1e1e;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 850px;
+  margin: auto;
+  font-family: 'Courier New', Courier, monospace;
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 1px;
+  color: #00ff00;
+  height: auto;
+  min-height: 100px;
+  height: 50vh;
+}
+
+
+.terminal {
+  height: 400px; 
+  width: 990px; 
+  margin: 50px auto; 
+  padding: 0px;
+  background-color: #000; 
+  border-radius: 10px;
+  overflow: hidden; 
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3), 0px 0px 30px rgba(255, 255, 255, 0.1); /* Glow branco */
+}
+.terminal-header {
+  background: #333;
+  padding: 10px;
+  color: #ccc;
+  font-family: 'Courier New', Courier, monospace;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+
+.terminal-content {
+  background: #111;
+  color: #00ff00;
+  padding: 20px;
+  flex: 1;
+  text-align: left;
+  font-size: 1rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.learn-more {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.learn-more:hover {
+  background: #fff;
+  color: #000;
+}
+
+#membros .instagram {
+  position: absolute;
+  bottom: 10px; 
+  left: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+#membros .card {
+  padding-bottom: 50px; 
+}
+
+#membros .card-inner {
+  animation: none;
+}
+
+#membros .card:hover {
+  transform: scale(1.08);
+  transition: transform 0.3s ease;
+}
+
+#nossa-equipe .card-inner {
+  animation: updown 3s ease-in-out infinite alternate;
+}
+
+
+
+  </style>
+</head>
+
+<body>
+    
+  <header>
+    <section class="hero-section">
+<h1 data-text="SEELYST">SEELYST</h1>
+        <p class="subtitle updown">We always have our eyes open. You blinked.</p>
+      
+        <div class="terminal">
+          <div class="terminal-bar">
+            <div class="window-buttons">
+              <span class="btn close"></span>
+              <span class="btn minimize"></span>
+              <span class="btn maximize"></span>
+            </div>
+            <div class="terminal-title">seelyst@seelyst:~/Desktop</div>
+          </div>
+          <div class="terminal-content">
+ <pre><span style="color: #00f;">┌──(seelyst@seelyst)-[<span style="color: #fff;">~/Desktop</span>]</span>
+<span style="color: #00f;">└─$</span> <span id="typewriter" class="typewriter-text"></span></pre>
+          </div>
+        </div>
+      
+        <button class="learn-more-button" onclick="document.getElementById('about-us').scrollIntoView({ behavior: 'smooth' });">
+          Learn More
+        </button>
+      </section>
+</header>
+
+<section id="about-us">
+  <img src="images/fsocietya.png" alt="Fsociety Logo" class="about-us-image">
+  <h2>About Us</h2>
+  <p>
+      We are an elite hacking team specializing in the development of high-impact tools such as 
+      <strong>stealers, grabbers and botnets</strong>.
+      We have mastered the art of digital hacking and manipulation, breaking through borders, breaking down defenses, and rewriting the rules of cyberspace. 
+      We don’t follow trends — we create them. Every line of code is a weapon. Every project is a statement of power. 
+      We are here to master the invisible and make our mark on chaos.
+  </p>
+</section>           
+
+            <section class="stats">
+                <div class="stats-container">
+                  <div class="stat-card">
+                    <img src="images/ferramentas.png" alt="Ferramentas Icon" class="stat-icon" />
+                    <h2 class="stat-number">10+</h2>
+                    <p class="stat-label">Tools Created</p>
+                  </div>
+                  <div class="stat-card">
+                    <img src="images/world_toptier.png" alt="Global Icon" class="stat-icon" />
+                    <h2 class="stat-number">Global</h2>
+                    <p class="stat-label">International Presence</p>
+                  </div>
+                </div>
+              </section>
+
+  <section id="nossa-equipe">
+    <h2>Our Team</h2>
+    <h3>FOUNDER'S</h3>
+  
+    <div class="cards-container"> 
+        <div class="card">
+            <div class="card-inner">
+              <div class="card-topo">
+                <img class="avatar" src="avatar/anjelium.png" alt="Avatar ANJELIUM">
+                <div class="card-info">
+                  <h4>ANJELIUM</h4>
+                  <div class="cargo">Founder</div>
+                </div>
+              </div>         
+<div class="frase">You blinked.</div>       
+<div class="skills-title">SKILLS</div>
+              <div class="habilidades">
+                <span>OSINT</span>
+                <span>Hacking</span>
+                <span>Pentest</span>
+                <span>Social Engineering</span>
+              </div>
+          
+              <div class="descricao">
+                Created trojans with social engineering of aimbot for FPS games, also responsible for nuking the biggest Panela on Discord.
+              </div>
+          
+              <div class="instagram" onclick="redirectToInstagram('https://instagram.com/anjeliumx')">
+                <img src="images/instagram.png" width="20">
+                @anjeliumx
+              </div>
+            </div>
+          </div>    
+          <div class="card">
+            <div class="card-inner">
+              <div class="card-topo">
+                <img class="avatar" src="avatar/belawer.png" alt="Avatar BELAWER">
+                <div class="card-info">
+                  <h4>BELAWER</h4>
+                  <div class="cargo">Founder</div>
+                </div>
+              </div>
+          
+              <div class="frase">It is not titles that honour men, but men that honour titles.</div>
+          
+              <div class="skills-title">SKILLS</div>
+              <div class="habilidades">
+                <span>Cracker</span>
+                <span>Hacking</span>
+                <span>Pentest</span>
+                <span>Social Engineering</span>
+              </div>
+          
+              <div class="descricao">
+                He was one of the biggest hackers in the YouTube hype, hacking MC Niack and others, and infected more than 10k computers.
+              </div>
+          
+              <div class="instagram" onclick="redirectToInstagram('https://instagram.com/belawerk')">
+                <img src="images/instagram.png" width="20">
+                @belawerk
+              </div>
+            </div>
+          </div>          
+  </section>
+ <section id="membros">
+    <h2 style="text-align: center; font-size: 3rem; color: #fff; margin-bottom: 40px;">MEMBERS</h2>
+    <div class="cards-container">
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-topo">
+            <img class="avatar" src="avatar/anjim.png" alt="Avatar JAPONESLOFY">
+            <div class="card-info">
+              <h4>ANJIMDEAD</h4>
+              <div class="cargo">Member</div>
+            </div>
+          </div>
+          <div class="frase">Luck favors the prepared mind.</div>
+          <div class="skills-title">SKILLS</div>
+          <div class="habilidades">
+            <span>OSINT</span>
+            <span>Humint</span>
+            <span>Cheat Developer</span>
+            <span>Social Engineering</span>
+          </div>
+          <div class="descricao">
+            Created undetected cheats for games such as Fivem, Samp, MTA, FreeFire, Counter Strike. Developed exclusive anti-cheat bypass methods, maintaining operation for months. Infiltrated hacking communities, extracting sensitive data from strategic targets. Cracked premium software and distributed free versions on underground forums. Contributed to malware projects in closed groups. Developed screen share bypass, circumventing detection in competitive calls.
+          </div>
+          <div class="instagram">
+
+            
+          </div>
+        </div>
+      </div>
+  
+<div class="card">
+    <div class="card-inner">
+      <div class="card-topo">
+        <img class="avatar" src="avatar/ask.png" alt="Avatar CARLOSLOFY">
+        <div class="card-info">
+          <h4>ASK</h4>
+          <div class="cargo">Member</div>
+        </div>
+      </div>
+      <div class="frase">Com vc sempre seguirei junto... Esperança.</div>
+      <div class="skills-title">SKILLS</div>
+      <div class="habilidades">
+     <span>Programming (Python, JavaScript, Lua) </span>
+     <span>Hacking </span>
+      </div>
+      <div class="descricao">
+       Was responsible for carrying out a powerful DDoS attack on McDonald's websites, showcasing his expertise in system exploitation and advanced programming.
+      </div>
+      <div class="instagram" onclick="redirectToInstagram('https://instagram.com/s3m.nexo')">
+        <img src="images/instagram.png" width="20">
+        @s3m.nexo
+      </div>
+    </div>
+  </div>
+  
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-topo">
+        <img class="avatar" src="avatar/FALLZ.png" alt="Avatar FALLZ">
+        <div class="card-info">
+          <h4>FALLZ</h4>
+          <div class="cargo">Member</div>
+        </div>
+      </div>
+      <div class="frase">Veni, Vidi, Vici</div> 
+      <div class="skills-title">SKILLS</div>
+      <div class="habilidades">
+        <span>OPSEC</span>
+        <span>Programming (Python, Go)</span>
+        <span>Social Engineering</span>
+      </div>
+      <div class="descricao">
+        It has one of the best OPSEC (Almost invisible), responsible for creating a raid method per app in Discord Directories.
+      </div>
+    </div>
+  </div>
+  
+   
+    </div>
+  </section>
+  
+
+<script>
+  const commands = [
+    "sudo nmap -sS -sV -p- 161.148.164.31",
+    "python3 slowloris.py 161.148.164.31 -p 80",
+    "msfconsole",
+    "[*] Initializing...",
+    "[*] Loading modules...",
+    "[*] Starting Metasploit Framework console...",
+    "hydra -l admin -P passwords.txt 161.148.164.31 ssh",
+    "ncat -lvp 4444",
+    'sqlmap -u "http://161.148.164.31/vuln.php?id=1" -T CPFS --dump'
+  ];
+
+  const typewriter = document.getElementById('typewriter');
+  let commandIndex = 0;
+  let charIndex = 0;
+
+  function type() {
+    const currentCommand = commands[commandIndex];
+    typewriter.textContent = currentCommand.substring(0, charIndex++);
+    if (charIndex > currentCommand.length) {
+      charIndex = 0;
+      commandIndex = (commandIndex + 1) % commands.length;
+      setTimeout(type, 1000);
+    } else {
+      setTimeout(type, 100);
+    }
+  }
+
+  type();
+</script>
+
+<script>
+  function redirectToInstagram(url) {
+    window.open(url, '_blank'); // Abre o link em uma nova aba
+  }
+</script>
+
+<script>
+
+</script>
+
+
+    </script>    
+
+<footer style="text-align: center; padding: 20px 0; background-color: #000; color: #fff; font-size: 14px;">
+    <h3 style="margin: 0; font-size: 1.2rem; font-weight: bold;">SEELYST</h3>
+    <p style="margin: 5px 0;">© 2025 Seelyst. All Rights Reserved.</p>
+    <div style="margin-top: 10px;">
+        <a href="http://t.me/seelyst" target="_blank" style="display: inline-block; text-decoration: none;">
+            <img src="social/telegram.png" alt="Telegram" style="width: 40px; transition: transform 0.3s ease;">
+        </a>
+    </div>
+</footer>
+
+<style>
+    footer a img:hover {
+        transform: scale(1.2); 
+    }
+</style>
+    
+</body>
+</html>
+
